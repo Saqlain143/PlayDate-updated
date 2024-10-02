@@ -1,5 +1,5 @@
-
 # PlayDate
+![PlayDate](https://github.com/user-attachments/assets/178ba797-3a8d-49e9-863f-635d915591c6)
 
 **PlayDate** is an interactive and fun web application built especially for kids! This project aims to create a safe and engaging environment where children can explore educational games and activities designed to boost their learning.
 
