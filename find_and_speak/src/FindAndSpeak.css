@@ -1,0 +1,223 @@
+/* App.css */
+
+.app {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+.sidebar {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed; /* Fix the sidebar in position */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px; /* Adjust width as needed */
+  transform: translateX(0); /* Sidebar is always visible */
+  transition: transform 0.3s ease;
+  z-index: 1; /* Ensure it is behind the content */
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sidebar-item.active,
+.sidebar-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-item i {
+  font-size: 18px;
+}
+
+.sidebar-item span {
+  font-size: 14px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px; /* Adjust to match sidebar width */
+  padding: 20px; /* Adjust padding if necessary */
+}
+
+.header {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  max-width: 200px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+/* Calendar Component */
+.calendar {
+  background-color: rgb(235, 130, 216); /* Cute background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Adjusted padding */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  max-width: 400px; /* Adjust the width */
+  margin-right: 20px; /* Adjust right margin to reduce extra space */
+}
+
+.calendar .react-calendar {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  max-height: 200px; /* Reduced maximum height */
+  overflow: hidden; /* Hide overflow */
+}
+
+.calendar .react-calendar__tile {
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.calendar .react-calendar__tile:enabled:hover,
+.calendar .react-calendar__tile:enabled:focus {
+  background-color: #ffebf0;
+  color: #ff66b2;
+}
+
+.calendar .react-calendar__tile--active {
+  background-color: #ff66b2;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.calendar .react-calendar__month-view__days__day--weekend {
+  color: #ff66b2;
+}
+
+/* Request/Response Component */
+.request-response {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.request-response table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.request-response table th,
+.request-response table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.request-response table th {
+  background-color: #f4f4f4;
+}
+
+/* Dashboard Chart Component */
+.dashboard-chart {
+  background-color: white;
+  max-width: 800px; /* Adjusted maximum width */
+  max-height: 200px; /* Adjusted maximum height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  .header img {
+    max-width: 150px;
+  }
+
+  .calendar,
+  .request-response {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .calendar .react-calendar__tile {
+    padding: 8px;
+  }
+
+  .request-response {
+    margin: 0; /* Adjust margin for smaller screens */
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 10px;
+  }
+
+  .header img {
+    max-width: 120px;
+  }
+
+  .calendar,
+  .request-response {
+    padding: 10px;
+  }
+
+  .calendar .react-calendar__tile {
+    padding: 6px;
+  }
+
+  .request-response {
+    margin: 0; /* Adjust margin for smaller screens */
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}

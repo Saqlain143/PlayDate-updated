@@ -1,0 +1,115 @@
+.scavenger-hunt-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #007acc;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0); /* Sidebar always visible */
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar nav ul li a .icon {
+    margin-right: 10px;
+  }
+  
+  .main-content {
+    margin-left: 250px; /* Adjust margin to fit the sidebar width */
+    padding: 20px;
+  }
+  
+  .header {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+  .header img {
+    max-width: 200px;
+  }
+  
+  .logo {
+    max-height: 40px;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .radio-group label {
+    margin-bottom: 10px;
+  }
+  
+  .submit-btn {
+    background-color: #007acc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #005fa3;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      transform: translateX(-100%);
+      width: 100%;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      padding: 15px;
+    }
+  }
+  

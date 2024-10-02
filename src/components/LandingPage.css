@@ -1,0 +1,99 @@
+body {
+  background-color: #008aca;
+}
+/* LandingPage.css */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.playdate-logo {
+  width: 300px; /* Adjust the size as needed */
+  margin-bottom: 70px;
+}
+
+.game-selection-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px; /* Space between the game boxes */
+  margin-bottom: 80px;
+}
+
+.game-box {
+  width: 250px;
+  height: 180px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, border 0.3s ease; /* Add border transition */
+  border: 2px solid transparent; /* Default border to avoid layout shift */
+}
+
+.game-box:hover {
+  transform: scale(1.05);
+}
+
+.game-box.selected {
+  border: 3px solid #28a745;
+  transform: scale(1.15);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.game-content {
+  display: flex; /* Flexbox to arrange images side by side */
+  align-items: center; /* Center images vertically */
+  justify-content: flex-start; /* Align images to the left */
+  width: 100%; /* Ensure it takes the full width of the game box */
+}
+
+.game-image-1 {
+  width: 60px; /* Adjust main image size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between images */
+  margin-left: 18px;
+}
+
+.game-logo-1 {
+  width: 140px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+.game-image-2 {
+  width: 110px; /* Adjust main image size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 5px; /* Space between images */
+  margin-left: 5px;
+}
+
+.game-logo-2 {
+  width: 115px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.play-button {
+  margin-top: 18px;
+  padding: 0.75rem 1.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #ffcc33;
+  transition: background-color 0.3s ease;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px auto; /* Center the button horizontally */
+  position: absolute; /* Fix the button to the bottom */
+  bottom: 1%;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Perfect center alignment */
+}
+
+.play-button:hover {
+  background-color: #e03e00;
+  color: whitesmoke;
+}

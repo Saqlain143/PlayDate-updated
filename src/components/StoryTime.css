@@ -1,0 +1,413 @@
+body {
+  font-family: Arial, sans-serif;
+  /* background-color: #1e6a8d; */
+  margin: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* height: 100vh; */
+}
+
+.App {
+  /* background-color: #1e6a8d; */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* padding: 40px; */
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+/* Make the checkmark positioned in the top-right corner */
+.checkmark-1 {
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  right: 100px;
+}
+.checkmark-2 {
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  right: 160px;
+}
+.checkmark-3 {
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  right: 220px;
+}
+
+/* Title Styling - Ensure it is at the top */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  margin-top: 50px;
+}
+
+.container {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Home Screen Styling */
+.home-screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.home-screen-content {
+  /* background-color: #ffa500; */
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Control the width of the content */
+  position: relative; /* Make the container relative */
+  text-align: center;
+}
+
+.logo {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+}
+.inside-logo {
+  width: 14%;
+  height: auto;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  position: absolute;
+  left: 70px;
+  top: 22px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+}
+.home-screen-image {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+}
+
+.home-button {
+  background-color: #ffbb00;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(51, 142, 240);
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home-button:hover {
+  background-color: #e03e00; /* Darker shade on hover */
+  color: black;
+}
+
+/* Character Selection and Place Selection Grid */
+.character-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  justify-items: center; /* Center items horizontally */
+  gap: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* Character Option Styling */
+.character-option {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-option img {
+  width: 120px; /* Keep image size consistent */
+  height: 120px; /* Keep image height consistent */
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  display: block;
+  margin: 0 auto;
+}
+
+.character-option:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Selected State */
+.selected .character-img {
+  border: 3px solid #28a745;
+  transform: scale(1.15);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Place Selection Grid - Similar to Character Selection Grid */
+.place-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  justify-items: center; /* Center items horizontally */
+  gap: 18px; /* Gap between images */
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* Place Option Styling - Similar to Character Option but with Rectangular Images */
+.place-option {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-option img {
+  width: 180px; /* Make the image wider */
+  height: 120px; /* Keep the image height shorter to make it rectangular */
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  display: block;
+  margin: 0 auto;
+}
+
+.place-option:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Add bold font to character and place names */
+.character-option p,
+.place-option p {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* Selected State for Place */
+.selected .place-img {
+  border: 3px solid #28a745;
+  transform: scale(1.15);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Story Page Styling */
+.story-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.story-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 15px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 60%;
+  max-width: 400px;
+  max-height: 150px;
+  line-height: 1.4;
+  border: 2px solid #f79c42;
+}
+
+/* Story Image Centered */
+.story-img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.story-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  /* background-color: #f1800f; */
+  color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 30px auto; /* Center the button horizontally */
+  position: absolute; /* Fix the button to the bottom */
+  bottom: 2%; /* Place button near the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Perfect center alignment */
+}
+
+/* Question Page Styling */
+.question-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: px; */
+  margin: 0 auto;
+}
+.question-text {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin: 180px auto;
+  padding: 15px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 75%;
+  max-width: 500px;
+  line-height: 1.4;
+  border: 2px solid #f79c42;
+}
+
+/* Microphone Button Styling */
+.mic-button {
+  background-color: white;
+  border-radius: 50%;
+  padding: 15px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 10%; /* Place mic button at bottom-center */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mic-button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.486);
+}
+
+.mic-button i {
+  font-size: 40px;
+  color: black;
+}
+
+/* When the mic is active (pressed), apply this styling */
+.mic-active {
+  background-color: #28a745; /* Green to indicate it's active */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.mic-active i {
+  color: white; /* Change icon color to white when active */
+}
+
+/* Results Page */
+.results-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin: 100px auto;
+}
+
+/* Feedback Text */
+.feedback-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Star Icon for Correct Answer */
+.star-icon {
+  font-size: 10rem;
+  color: rgb(223, 205, 0);
+  margin-bottom: 30px;
+  border: 2px;
+}
+
+/* Submit Button Positioned at the Bottom Center */
+.button-select {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #f1800f;
+  color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px auto; /* Center the button horizontally */
+  position: absolute; /* Fix the button to the bottom */
+  bottom: 1%;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Perfect center alignment */
+}
+
+button:hover {
+  background-color: #b8660e;
+}
+
+/* Feedback */
+.feedback.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.feedback.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .app {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .character-selection,
+  .place-selection {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Show 2 images per row on smaller screens */
+    gap: 20px;
+  }
+}
