@@ -60,5 +60,4 @@ This project is developed by a dedicated team of contributors, including:
 - [Afsheen Ghumman](https://github.com/afsheen483) (Back-end Developer)
 - [Saqlain Abid](https://github.com/Saqlain143) (AI Developer)
 - [Mazeniify](https://github.com/Mazeniify) (Back-end Developer, Database)
-
-PlayDate is open-source and available under the MIT License.
+  
