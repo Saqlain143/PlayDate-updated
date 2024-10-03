@@ -1,0 +1,7 @@
+jupyterlab>3.0
+openai==1.49.0
+pillow==10.4.0
+requests==2.32.3
+ffprobe==0.5
+pydub==0.25.1
+ffmpeg==1.4
